@@ -6,6 +6,9 @@ jobs:
   - job: Cypress_e2e_tests
     pool:
       vmImage: 'ubuntu-latest'
+    variables:
+       - name: term
+         value: xterm
     steps:
       - task: NodeTool@0
         inputs:
