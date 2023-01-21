@@ -47,7 +47,7 @@ jobs:
       - task: PublishTestResults@2
         displayName: 'Publish Test Results '
         inputs:
-          testResultsFiles: '**/smoke-test-results-*.xml'
+          testResultsFiles: '**/TEST-*.xml'
           searchFolder: '$(System.DefaultWorkingDirectory)/_MicroNetOnline_E2E.Cypress/results'
           mergeTestResults: true
           testRunTitle: 'E2E - $(Browser)'
