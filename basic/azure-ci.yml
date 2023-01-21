@@ -52,7 +52,7 @@ jobs:
         displayName: 'Publish Test Results '
         inputs:
           testResultsFiles: '**/results.xml'
-          searchFolder: '$(System.DefaultWorkingDirectory)/results'
+          searchFolder: '$(System.DefaultWorkingDirectory)'
           mergeTestResults: true
           testRunTitle: 'E2E - $(Browser)'
         continueOnError: true
