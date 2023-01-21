@@ -43,3 +43,17 @@ jobs:
       # To record on Cypress dashboard we need to set CYPRESS_RECORD_KEY environment variable
       - script: npm run test:ci
         displayName: 'Run Cypress tests'
+
+variables:
+  Browser: 'electron'
+
+steps:
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results '
+  inputs:
+    testResultsFiles: '**/smoke-test-results-*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/_MicroNetOnline_E2E.Cypress/results'
+    mergeTestResults: true
+    testRunTitle: 'E2E - $(Browser)'
+  continueOnError: true
+  condition: succeededOrFailed()        
