@@ -53,3 +53,7 @@ jobs:
           testRunTitle: 'E2E - $(Browser)'
         continueOnError: true
         condition: succeededOrFailed()  
+        
+        env:
+          # avoid warnings about terminal
+          TERM: xterm
