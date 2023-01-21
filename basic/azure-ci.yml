@@ -56,4 +56,4 @@ jobs:
           mergeTestResults: true
           testRunTitle: 'E2E - $(Browser)'
         continueOnError: true
-        condition: succeededOrFailed()  
+        condition: succeededOrFailed()
