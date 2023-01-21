@@ -52,7 +52,7 @@ jobs:
         displayName: 'Publish Test Results '
         inputs:
           testResultsFiles: '**/TEST-*.xml'
-          searchFolder: '$(System.DefaultWorkingDirectory)/_MicroNetOnline_E2E.Cypress/results'
+          searchFolder: '$(System.DefaultWorkingDirectory)/results'
           mergeTestResults: true
           testRunTitle: 'E2E - $(Browser)'
         continueOnError: true
