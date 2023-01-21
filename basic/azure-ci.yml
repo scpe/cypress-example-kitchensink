@@ -51,7 +51,7 @@ jobs:
       - task: PublishTestResults@2
         displayName: 'Publish Test Results '
         inputs:
-          testResultsFiles: '**/TEST-*.xml'
+          testResultsFiles: '**/results.xml'
           searchFolder: '$(System.DefaultWorkingDirectory)/results'
           mergeTestResults: true
           testRunTitle: 'E2E - $(Browser)'
