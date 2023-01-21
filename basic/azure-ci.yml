@@ -43,6 +43,9 @@ jobs:
       # To record on Cypress dashboard we need to set CYPRESS_RECORD_KEY environment variable
       - script: npm run test:ci
         displayName: 'Run Cypress tests'
+        env:
+          # avoid warnings about terminal
+          TERM: xterm
       
       - task: PublishTestResults@2
         displayName: 'Publish Test Results '
